@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vivian_dark"
+    tools:context=".Activitys.TalksActivity">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="@drawable/background_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/myTalksProfilePhoto"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        app:riv_oval="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pp"
+        android:layout_marginTop="13sp"
+        android:layout_marginStart="20sp"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+
+        />
+
+
+    <TextView
+      android:id="@+id/myTalksUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="28sp"
+        android:text="Zeynep Sude"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintStart_toEndOf="@id/myTalksProfilePhoto"
+        app:layout_constraintEnd_toStartOf="@id/signOut"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/signOut"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        app:tint="@color/white"
+        android:src="@drawable/sign_out"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="15sp"
+        android:padding="12sp"
+        android:onClick="signOutClick"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        android:background="@drawable/background_button"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        android:layout_marginEnd="15sp"
+        app:tint = "@color/white"
+        app:backgroundTint="@color/primary_dark2"
+        android:src="@drawable/talks_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="addTalkClick"
+        android:contentDescription="Add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#1C2E46</color>
+
+    <color name="vivian_dark">#2F194A</color>
+    <color name="primary_dark2">#142232</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="input_background">#ECECEC</color>
+    <color name="icon_background">#20FFFFFF</color>
+    <color name="error">#B00020</color>
+
+    <color name="vivian_received_message_background">#7E6AB0</color>
+    <color name="received_message_background2">#090D16</color>
+
+    <color name="vivian_sender_message_background">#BC562B</color>
+
+    <color name="vivian_chat_background">#212121</color>
+    <color name="chat_user_background">#242424</color>
+    <color name="chat_edittext_background">#343434</color>
+</resources>

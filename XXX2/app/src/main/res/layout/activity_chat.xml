@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.ChatActivity"
+    android:background="@color/vivian_chat_background">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="@color/primary_dark2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/chatUserProfilePhoto"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        app:riv_oval="true"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/pp"
+        android:layout_marginTop="13sp"
+        android:layout_marginStart="20sp"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        />
+
+    <TextView
+        android:id="@+id/chatUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="28sp"
+        android:text="Zeynep Sude"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintStart_toEndOf="@id/chatUserProfilePhoto"
+        />
+
+    <View
+        android:id="@+id/viewEdit"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <EditText
+        android:id="@+id/chatEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:hint="Add messsage"
+        android:background="@drawable/background_chat_edit_text"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"
+        android:inputType="text"
+
+        android:textStyle="bold"
+        android:paddingStart="15sp"
+        android:paddingEnd="10sp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="@id/viewEdit"
+        app:layout_constraintEnd_toStartOf="@id/chatSendFrame"
+        app:layout_constraintBottom_toTopOf="@id/viewEdit"
+        app:layout_constraintTop_toBottomOf="@id/viewEdit"/>
+
+
+
+    <FrameLayout
+        android:id="@+id/chatSendFrame"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="sendMessageClick"
+        android:background="@drawable/background_send_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:padding="8dp"
+            android:src="@drawable/send"
+            app:tint="@color/white"/>
+
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:stackFromEnd="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewEdit"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
